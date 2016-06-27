@@ -1,4 +1,4 @@
-var pubnubEvents = require('../lib/index');
+var PubnubEvents = require('../lib/index');
 var mockery = require('mockery');
 var sinon = require('sinon');
 var should = require('chai').should();
@@ -7,13 +7,13 @@ var eventName = 'something';
 var eventData = 'something_data';
 var channel = 'button1';
 var device = 'board';
-var publish_key = 'pub-c-8e6ce779-896f-4c35-a786-46ad43d20e99';
-var subscribe_key = 'sub-c-21ad773a-35cb-11e6-ac64-0619f8945a4f';
+var publishKey = 'pub-c-8e6ce779-896f-4c35-a786-46ad43d20e99';
+var subscribeKey = 'sub-c-21ad773a-35cb-11e6-ac64-0619f8945a4f';
 
 describe('puhnub-events', function () {
   var pubNubStub;
   var publishStub;
-  beforeEach(function() {
+  beforeEach(function () {
     pubNubStub = sinon.stub();
     publishStub = sinon.stub();
     mockery.enable();
@@ -23,15 +23,15 @@ describe('puhnub-events', function () {
     });
   });
 
-  afterEach(function() {
+  afterEach(function () {
     mockery.deregisterAll();
     mockery.disable();
   });
 
   it('should send pubnub when events are triggered', function () {
-    var myEventEmitter = new pubnubEvents({
-      publish_key: publish_key,
-      subscribe_key: subscribe_key,
+    var myEventEmitter = new PubnubEvents({
+      publish_key: publishKey,
+      subscribe_key: subscribeKey,
       channel: channel,
       device: device
     });
@@ -51,9 +51,9 @@ describe('puhnub-events', function () {
   });
 
   it('should NOT send pubnub when events are triggered but is muted', function () {
-    var myEventEmitter = new pubnubEvents({
-      publish_key: publish_key,
-      subscribe_key: subscribe_key,
+    var myEventEmitter = new PubnubEvents({
+      publish_key: publishKey,
+      subscribe_key: subscribeKey,
       channel: channel,
       device: device
     });
@@ -67,10 +67,9 @@ describe('puhnub-events', function () {
   });
 
   it('should send pubnub when events are triggered and it was un-muted', function () {
-
-    var myEventEmitter = new pubnubEvents({
-      publish_key: publish_key,
-      subscribe_key: subscribe_key,
+    var myEventEmitter = new PubnubEvents({
+      publish_key: publishKey,
+      subscribe_key: subscribeKey,
       channel: channel,
       device: device
     });
@@ -82,5 +81,4 @@ describe('puhnub-events', function () {
     myEventEmitter.unMutePubNub();
     myEventEmitter.emit(eventName, eventData);
   });
-
 });

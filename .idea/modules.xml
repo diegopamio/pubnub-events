@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/pubnub-events/.idea/pubnub-events.iml" filepath="$USER_HOME$/pubnub-events/.idea/pubnub-events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pubnub-events.iml" filepath="$PROJECT_DIR$/.idea/pubnub-events.iml" />
     </modules>
   </component>
 </project>
