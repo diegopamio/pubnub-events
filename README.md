@@ -1,4 +1,4 @@
-# pubnub-events [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# pubnub-events [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status](https://coveralls.io/repos/github/diegopamio/pubnub-events/badge.svg?branch=master)](https://coveralls.io/github/diegopamio/pubnub-events?branch=master)
 > Send PubNub messages on NodeJS events.
 
 This module provides an alternative EventEmitter (default in NodeJS) that sends
@@ -44,5 +44,3 @@ MIT © [Diego Pamio](http://github.com/diegopamio)
 [travis-url]: https://travis-ci.org/diegopamio/pubnub-events
 [daviddm-image]: https://david-dm.org/diegopamio/pubnub-events.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/diegopamio/pubnub-events
-[coveralls-image]: https://coveralls.io/repos/diegopamio/pubnub-events/badge.svg
-[coveralls-url]: https://coveralls.io/r/diegopamio/pubnub-events
