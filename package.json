@@ -1,6 +1,6 @@
 {
   "name": "pubnub-events",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Send PubNub messages on NodeJS events.",
   "homepage": "http://gitub.com/diegopamio/pubnub-events",
   "author": {
