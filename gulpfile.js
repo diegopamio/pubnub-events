@@ -18,6 +18,7 @@ require('babel-core/register');
 gulp.task('static', function () {
   return gulp.src('**/*.js')
     .pipe(excludeGitignore())
+    .pipe(babel())
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
